@@ -1,0 +1,14 @@
+<h1>Hola {{nombre}}</h1>
+
+<h3 id="usuario" [innerText]="nombre" [ngClass]="nombre == 'Anónimo' ? 'anonimo' : 'saludo'">
+  <!-- No indicamos nada en las etiquetas, sino que el valor viene definido por las propiedad -->
+</h3>
+
+<p [ngStyle]="{color: 'orange'}">Hola, ¿qué tal?</p>
+
+<p [ngStyle]="myStyle">Adiós, muy buena</p>
+<button id="emit-alerta" (click)="enviarMensajeAlPadre()">Mostrar alerta</button>
+
+
+<!-- Hacer uso del componente listaBasica del módulo Listas -->
+<app-lista-basica></app-lista-basica>

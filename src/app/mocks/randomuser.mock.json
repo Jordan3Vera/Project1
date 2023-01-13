@@ -1,0 +1,66 @@
+{
+  "results": [
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Olelko",
+        "last": "Bidilo"
+      },
+      "location": {
+        "street": {
+          "number": 3291,
+          "name": "Grebelna"
+        },
+        "city": "Tismenicya",
+        "state": "Luganska",
+        "country": "Ukraine",
+        "postcode": 15405,
+        "coordinates": {
+          "latitude": "75.4467",
+          "longitude": "-134.2996"
+        },
+        "timezone": {
+          "offset": "+8:00",
+          "description": "Beijing, Perth, Singapore, Hong Kong"
+        }
+      },
+      "email": "olelko.bidilo@example.com",
+      "login": {
+        "uuid": "91d54d70-481b-4b6b-a1e5-6ac869e5d049",
+        "username": "tinyfrog470",
+        "password": "aztnm",
+        "salt": "rFeRSAT5",
+        "md5": "0eda124ba6923cd3ca64d162d175beec",
+        "sha1": "248c1b24960f274d53d37a4749d769b046178940",
+        "sha256": "612ff3b2122d2e3bc81845dbe9494aae3c4bf658d2d70bf3e19c35e734a2ae27"
+      },
+      "dob": {
+        "date": "1983-01-02T04:55:57.416Z",
+        "age": 40
+      },
+      "registered": {
+        "date": "2018-08-01T08:08:18.996Z",
+        "age": 4
+      },
+      "phone": "(068) O83-8026",
+      "cell": "(096) G28-4109",
+      "id": {
+        "name": "",
+        "value": null
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/55.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/55.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/55.jpg"
+      },
+      "nat": "UA"
+    }
+  ],
+  "info": {
+    "seed": "4b1e90f32eb8838c",
+    "results": 1,
+    "page": 1,
+    "version": "1.4"
+  }
+}

@@ -1,0 +1,18 @@
+<!-- Formulario Ractivo Básico -->
+<form [formGroup]="miFormulario">
+  <!-- Previsualización de los valores del formulario -->
+  <h2>Datos en vivo del formulario:</h2>
+  <!-- Usaremos un pipe de tipo json p'ara pasar el objeto a un JSON y mostrarlo -->
+  <p>{{ miFormulario.value | json }}</p>
+
+  <!-- Campos del formulario -->
+    <input type="text" matInput placeholder="Nombre" formControlName="nombre">
+
+    <input type="text" matInput placeholder="Apellidos" formControlName="apellidos">
+
+    <input type="text" matInput placeholder="Email" formControlName="email">
+
+    <input type="text" matInput placeholder="telefono" formControlName="telefono">
+
+    <input type="text" matInput placeholder="direccion" formControlName="direccion">
+</form>

@@ -1,0 +1,47 @@
+<h1>Ejemplos de pipes nativos de Angular</h1>
+
+<!-- Fechas -->
+<h2>Pipes para fechas</h2>
+<p>Mi cumpleaños es: {{ dob }}</p>
+<p>Mi cumpleaños con PIPE es: {{ dob | date }}</p>
+<p>Mi cumpleaños con PIPE DATE "dd/MM/yyyy" es: {{dob | date: "dd/MM/yyyy" }}</p>
+
+<p>Mi cumpleaños con PIPE DATE Short es: {{ dob | date: 'shortDate' }}</p>
+<p>Mi cumpleaños con PIPE DATE Full es: {{ dob | date: 'fullDate' }}</p>
+
+<p>Mi cumpleaños con PIPE DATE Short/Full es: {{ dob | date: dateFormat }}</p>
+<button type="button" (click)="cambiarFormato()">Cambiar formato a {{ !cambio ? 'Short' : 'Full' }}</button>
+
+<!-- Mayúsculas / Minúsculas  -->
+<h4>Bienvenido, {{nombre | uppercase}}</h4>
+<h4>Nombre de usuario, @{{nombre | lowercase}}</h4>
+
+<!-- Decimales  -->
+<p>PI (5 decimales): {{numero_PI | number: '.3-3' }}</p>
+<p>PI (2 enteros): {{ numero_PI | number: '.5-5' }}</p>
+<p>PI (2 enteros y 8 decimales): {{ numero_PI | number: '2.8-8' }}</p>
+
+<!-- Moneda (Currency) -->
+<p>Precio del carrito: {{ precioCarrito | currency: 'EUR' }}</p>
+<p>Precio del carrito: {{ precioCarrito | currency: 'USD' }}</p>
+<p>Precio del carrito: {{ precioCarrito | currency: 'EUR':true:'.3-3' }}</p>
+
+<!-- JSON -->
+<p>{{persona | json }}</p>
+
+<!-- Percentajes  -->
+<p>Porcentaje de votos obtenidos: {{cantidad | percent: '2.2-2'}}</p>
+
+<!-- Slice  -->
+<p>Texto demasiado largo: {{textoLargo | slice:0-10}}</p>
+
+<!-- Combinación de pipes  -->
+<p>Mi cumpleaños con PIPE DATE Short/Full MAYUS es: {{ dob | date: dateFormat | uppercase}}</p>
+<p>Mi cumpleaños con PIPE DATE Short/Full MINUS es: {{ dob | date: dateFormat | lowercase}}</p>
+
+<!-- Pipe personzalido  (Multiplica)-->
+<p>Resultado {{ 2 | multiplica: 10 }} puntos</p>
+
+<!-- Pipe personalizado (Calcular puntuación) -->
+<p>{{jugador1 | calcularPuntuacion }}</p>
+<p>{{jugador2 | calcularPuntuacion }}</p>
