@@ -39,6 +39,18 @@ import { CalcularPuntuacionPipe } from './pipes/calcular-puntuacion.pipe';
 import { NombreCompletoPipe } from './pipes/nombre-completo.pipe';
 import { RandomUserComponent } from './components/random-user/random-user.component';
 import { RandomContactPageComponent } from './pages/random-contact-page/random-contact-page.component';
+import { NavComponent } from './components/nav/nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { TaskPageComponent } from './pages/task-page/task-page.component';
+import { KanbanTaskComponent } from './components/kanban-task/kanban-task.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { EjemploAnimationComponent } from './components/ejemplo-animation/ejemplo-animation.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +72,12 @@ import { RandomContactPageComponent } from './pages/random-contact-page/random-c
     CalcularPuntuacionPipe,
     NombreCompletoPipe,
     RandomUserComponent,
-    RandomContactPageComponent
+    RandomContactPageComponent,
+    NavComponent,
+    DashboardComponent,
+    TaskPageComponent,
+    KanbanTaskComponent,
+    EjemploAnimationComponent
   ],
   imports: [
     BrowserModule,
@@ -72,7 +89,14 @@ import { RandomContactPageComponent } from './pages/random-contact-page/random-c
     ListsModule,
     BrowserAnimationsModule,
     MaterialModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    DragDropModule
   ],
    providers: [
     // Registramos el locale de ES para que los PIPES salgan en español

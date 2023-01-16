@@ -12,6 +12,7 @@ import { IRandomContact, Results } from '../../models/randomuser';
 })
 export class ContactsPageComponent implements OnInit {
 
+  cargando: boolean = true;
   filtroSexo: string = 'todos';
   listaRandomContacts: IRandomContact[] = [];
 
@@ -37,7 +38,11 @@ export class ContactsPageComponent implements OnInit {
                   this.listaRandomContacts.push(randomContact);
                 });
               },
-              error: (err) => console.error(err)
+              error: (err) => console.error(err),
+              complete: () => {
+                console.info("Petición de random contacts terminada");
+                this.cargando = false;
+              }
             });
           }else{
             this.randomUserService.obtenerRandomContacts(10).subscribe({
@@ -46,7 +51,11 @@ export class ContactsPageComponent implements OnInit {
                   this.listaRandomContacts.push(randomContact);
                 });
               },
-              error: (err) => console.error(err)
+              error: (err) => console.error(err),
+              complete: () => {
+                console.info("Petición de random contacts terminada");
+                this.cargando = false;
+              }
             });
           }
         }
@@ -61,7 +70,7 @@ export class ContactsPageComponent implements OnInit {
         data: contacto
       }
     }
-    this.router.navigate(["/home"], navigationExtras);
+    this.router.navigate(["/dashboard"], navigationExtras);
   }
 
 

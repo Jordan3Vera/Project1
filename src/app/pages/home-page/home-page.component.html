@@ -1,4 +1,4 @@
-<h1>Home Page</h1>
+<h1>Juego del amigo invisible</h1>
 <h3>Bienvenido!</h3>
 <h4 *ngIf="contactoSeleccionado">Has seleccioando a: {{contactoSeleccionado.name.first}}</h4>
 
@@ -15,6 +15,6 @@
 
 <div>
   <p>Filtros:</p>
-  <a routerLink="['/contacts']" [queryParams]="{sexo: 'female'}">Amigas | </a>
-  <a routerLink="['/contacts']" [queryParams]="{sexo: 'male'}">| Amigos</a>
+  <a routerLink="['/dashboard/contacts']" [queryParams]="{sexo: 'female'}">Amigas | </a>
+  <a routerLink="['/dashboard/contacts']" [queryParams]="{sexo: 'male'}">| Amigos</a>
 </div>
