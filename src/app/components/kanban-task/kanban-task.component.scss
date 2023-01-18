@@ -25,6 +25,10 @@
   font-size: 14px;
 }
 
+.completed-task{
+  background-color: aliceblue;
+}
+
 .list-item:last-child {
   border: none;
 }
@@ -51,3 +55,13 @@
   opacity: 0;
 }
 
+// Estilos para niveles de tareas
+.msg-enhorabuena{
+  color: rgb(148,219,41);
+  font-weight: bold;
+}
+
+.msg-trabajar{
+  color: tomato;
+  font-weight: bold ;
+}

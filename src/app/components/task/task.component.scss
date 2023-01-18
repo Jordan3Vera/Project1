@@ -1,0 +1,17 @@
+// Estilos para niveles de tareas
+.info-task{
+  color: rgb(104,104,230);
+}
+.info-task:hover,
+.urgent-task:hover,
+.blocking-task:hover{
+  color: white;
+}
+
+.urgent-task{
+  color: rgb(219,154,34);
+}
+
+.blocking-task{
+  color: tomato;
+}

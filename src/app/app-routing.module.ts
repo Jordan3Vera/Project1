@@ -9,6 +9,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { RandomContactPageComponent } from './pages/random-contact-page/random-contact-page.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { TaskPageComponent } from './pages/task-page/task-page.component';
+import { OnDemandPreloadStrategy } from './routes/preloading-strategies/on-demand-preloading-strategy';
 
 const routes: Routes = [
   {
@@ -45,7 +46,15 @@ const routes: Routes = [
         path: 'task',
         component: TaskPageComponent,
         canActivate: [AuthGuard]
-      }
+      },
+      {
+        path: 'fire-store',
+        loadChildren: () => import('./modules/pages/fire-store/fire-store.module').then(m => m.FireStoreModule),
+        canActivate: [AuthGuard],
+        data: {
+          preload: true
+        }
+      },
     ]
   },
   {
@@ -59,7 +68,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,
+  {
+    preloadingStrategy: OnDemandPreloadStrategy
+  }
+  )],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

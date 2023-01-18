@@ -51,6 +51,10 @@ import { TaskPageComponent } from './pages/task-page/task-page.component';
 import { KanbanTaskComponent } from './components/kanban-task/kanban-task.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { EjemploAnimationComponent } from './components/ejemplo-animation/ejemplo-animation.component';
+import { TaskComponent } from './components/task/task.component';
+import { MouseOverDirective } from './directives/mouse-over.directive';
+import { LifeCycleDirective } from './directives/life-cycle.directive';
+import { OnDemandPreloadStrategy } from './routes/preloading-strategies/on-demand-preloading-strategy';
 
 @NgModule({
   declarations: [
@@ -77,7 +81,10 @@ import { EjemploAnimationComponent } from './components/ejemplo-animation/ejempl
     DashboardComponent,
     TaskPageComponent,
     KanbanTaskComponent,
-    EjemploAnimationComponent
+    EjemploAnimationComponent,
+    TaskComponent,
+    MouseOverDirective,
+    LifeCycleDirective
   ],
   imports: [
     BrowserModule,
@@ -102,7 +109,8 @@ import { EjemploAnimationComponent } from './components/ejemplo-animation/ejempl
     // Registramos el locale de ES para que los PIPES salgan en español
     {
       provide: LOCALE_ID, useValue: 'es'
-    }
+    },
+    OnDemandPreloadStrategy
   ],
   bootstrap: [AppComponent]
 })
